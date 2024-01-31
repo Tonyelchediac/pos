@@ -1,0 +1,254 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+a{
+    text-decoration: none;
+}
+
+#passcodeForm{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20%;
+}
+
+#passcodeForm p{
+    font-size: large;
+    
+}
+
+#discount-input{
+    border: 3px solid black;
+    border-radius: 15px;
+    border-radius: 15px;
+    width:500px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.inputpasscode{
+    padding-left: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+    width:500px;
+    height: 30px;
+}
+
+.alfa{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+#summaryorder{
+    padding-top: 20px;
+}
+
+#menu{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0px;
+    left: auto;
+}
+
+#menu li {
+    list-style: none;
+    margin: 10px;
+}
+
+.ordermenu {
+    background-color: #4CAF50;
+    width: 8rem;
+    height: 4rem;
+    color: white;
+    padding: 8px 12px;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+a .button-a{
+    margin-top: 20px;
+}
+
+.button-a{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionsbuttons{
+    font-size: large;
+    margin-top: 40px;
+    background-color: #4CAF50;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 4rem;
+    color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.button-k {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: blue;
+}
+
+#order-summary li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+#order-summary button {
+    border: none;
+    border-radius: none;
+    background-color: white;
+    color: red;
+}
+
+#order-summary button:hover {
+    color: blue;
+}
+
+p.discounted-total {
+    color: #31708f;
+    font-weight: bold;
+}
+
+.tables{
+    margin: 200px 200px 0px 200px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    grid-gap: 2rem;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    html{
+        font-size: 50%;
+    }
+
+    section{
+        font-size: 15px;
+    }
+
+    #passcodeForm{
+        margin-top: 50%;
+    }
+
+    #passcodeForm p{
+        font-size: large;
+        
+    }
+    
+    .inputpasscode{
+        border: 3px solid black;
+        border-radius: 15px;
+        width:150px;
+        height: 30px;
+    }
+
+    .tables{
+        margin: 200px 0 0 0;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        grid-gap: 2rem;
+    }
+
+    .ordermenu {
+        background-color: #4CAF50;
+        width: 10rem;
+        height: 8rem;
+        color: white;
+        padding: 8px 12px;
+        border: 3px solid black;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    #menu{
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2px;
+        left: auto;
+    }
+
+    .button-k {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 12px;
+        border: 3px solid black;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .button-a{
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sectionsbuttons{
+        font-size: large;
+        margin-top: 40px;
+        background-color: #4CAF50;
+        align-items: center;
+        justify-content: center;
+        width: 25rem;
+        height: 6rem;
+        color: white;
+        border: 3px solid black;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .alfa{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+
+    #discount-input{
+        border: 3px solid black;
+        border-radius: 15px;
+        border-radius: 15px;
+        width:200px;
+        height: 30px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+
+}
