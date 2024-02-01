@@ -121,13 +121,14 @@
         <ul id="order-summary"></ul>
         <p>Total: LBP <span id="order-total">0</span></p>
         <p class="discounted-total">Discounted Total: <span id="discounted-total">0</span></p>
+        <button class="button-k" onclick="sendOrderSummaryToWhatsApp()">Click to Send Order Summary</button>
     </section>
 
 </div>
 
     <script>
     let order = [];
-    const currentPage = window.location.pathname; // Get the current page URL
+    const currentPage = window.location.pathname;
 
     window.onload = function() {
         const storedOrder = localStorage.getItem(`order_${currentPage}`);
@@ -136,6 +137,23 @@
             updateOrderSummary();
         }
     };
+
+    function sendOrderSummaryToWhatsApp() {
+    const orderSummary = getOrderSummaryText();
+    const whatsappNumber = '+96171096971';
+
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(orderSummary)}`);
+}
+
+function getOrderSummaryText() {
+    let summaryText = 'Order Summary - Table 2:\n\n';
+
+    order.forEach((item) => {
+        summaryText += `${item.item}\n`;
+    });
+
+    return summaryText;
+}
 
 function addToOrder(item, price) {
     order.push({ item, price });
@@ -239,6 +257,25 @@ function resetOrder() {
 }
 
 function finishAndPay() {
+    const recipientNumber = prompt('Enter WhatsApp number to send the order summary (e.g., +96171096971):');
+
+    if (!recipientNumber) {
+        alert('Invalid WhatsApp number. Please enter a valid number to send the order summary.');
+        return;
+    }
+
+    let orderSummary = '*Hello From TCRCS*\nThis is the Receipt for Your Order.\n Sitting on Table No.2\n\n*Order:*\n';
+
+    order.forEach((item) => {
+        orderSummary += `${item.item} - LBP ${item.price.toLocaleString()},000\n`;
+    });
+
+    orderSummary += `\nTotal: LBP ${getOrderTotal().toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`;
+
+    orderSummary += '\n\n----------------------\nThank You For Visiting Us\nPowered by TCRCs';
+
+    window.open(`https://api.whatsapp.com/send?phone=${encodeURIComponent(recipientNumber)}&text=${encodeURIComponent(orderSummary)}`);
+
     resetOrder();
     order = [];
     updateOrderSummary();

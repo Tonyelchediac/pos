@@ -220,6 +220,10 @@ p.discounted-total {
         align-items: center;
     }
 
+    button:hover {
+        background-color: #4CAF50 ;
+    }
+
     .sectionsbuttons{
         font-size: large;
         margin-top: 40px;
