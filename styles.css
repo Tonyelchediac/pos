@@ -1,10 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 20px;
+    background: url('images/th.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
+
 h1 {
-    color: #333;
+    color:#17fe4a ;
+}
+
+h2 {
+    color:#17fe4a ;
 }
 
 a{
@@ -16,10 +32,11 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 20%;
+    margin: 20% auto;
 }
 
 #passcodeForm p{
+    color: #17fe4a;
     font-size: large;
     
 }
@@ -29,8 +46,9 @@ a{
     border-radius: 15px;
     border-radius: 15px;
     width:500px;
-    height: 30px;
-    margin-bottom: 20px;
+    height: 40px;
+    padding-left: 20px;
+    margin: 20px 0 20px 0;
 }
 
 .inputpasscode{
@@ -38,7 +56,7 @@ a{
     border: 3px solid black;
     border-radius: 15px;
     width:500px;
-    height: 30px;
+    height: 40px;
 }
 
 .alfa{
@@ -53,6 +71,10 @@ section {
 
 #summaryorder{
     padding-top: 20px;
+}
+
+#summaryorder p{
+    color: #17fe4a;
 }
 
 #menu{
@@ -70,10 +92,11 @@ section {
 }
 
 .ordermenu {
-    background-color: #4CAF50;
+    background-color: #17fe4a;
+    font-weight: 700;
     width: 8rem;
     height: 4rem;
-    color: white;
+    color: black;
     padding: 8px 12px;
     border: 3px solid black;
     border-radius: 15px;
@@ -93,21 +116,26 @@ a .button-a{
 
 .sectionsbuttons{
     font-size: large;
+    font-weight: 800;
     margin-top: 40px;
-    background-color: #4CAF50;
+    background-color: #17fe4a;
     align-items: center;
     justify-content: center;
     width: 25rem;
     height: 4rem;
-    color: white;
+    color: black;
     border: 3px solid black;
     border-radius: 15px;
     cursor: pointer;
 }
 
 .button-k {
-    background-color: #4CAF50;
-    color: white;
+    background-color:#17fe4a;
+    color: black;
+    font-weight: 800;
+    width: 15rem;
+    height: 2.5rem;
+    margin: 5px 0 5px 0;
     padding: 8px 12px;
     border: 3px solid black;
     border-radius: 15px;
@@ -117,17 +145,26 @@ a .button-a{
 
 button:hover {
     background-color: blue;
+    color: white;
 }
 
 #order-summary li {
+    color: white;
+    font-weight: 600;
     list-style: none;
-    margin-bottom: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+.order-total{
+    color: #17fe4a;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
 }
 
 #order-summary button {
     border: none;
+    background-color: transparent;
     border-radius: none;
-    background-color: white;
     color: red;
 }
 
@@ -136,8 +173,9 @@ button:hover {
 }
 
 p.discounted-total {
-    color: #31708f;
+    color: #17fe4a;
     font-weight: bold;
+    margin: 10px 0 10px 0;
 }
 
 .tables{
@@ -151,9 +189,15 @@ p.discounted-total {
 
 
 
+
+
+
+
+
+
 @media only screen and (max-width: 768px) {
     html{
-        font-size: 50%;
+        font-size: 2.5vw;
     }
 
     section{
@@ -172,8 +216,8 @@ p.discounted-total {
     .inputpasscode{
         border: 3px solid black;
         border-radius: 15px;
-        width:150px;
-        height: 30px;
+        width:300px;
+        height: 35px;
     }
 
     .tables{
@@ -185,7 +229,7 @@ p.discounted-total {
     }
 
     .ordermenu {
-        background-color: #4CAF50;
+        background-color:#17fe4a;
         width: 10rem;
         height: 8rem;
         color: white;
@@ -205,8 +249,10 @@ p.discounted-total {
     }
 
     .button-k {
-        background-color: #4CAF50;
+        background-color: #17fe4a;
         color: white;
+        width: 200px;
+        height: 5rem;
         padding: 8px 12px;
         border: 3px solid black;
         border-radius: 15px;
@@ -221,13 +267,13 @@ p.discounted-total {
     }
 
     button:hover {
-        background-color: #4CAF50 ;
+        background-color: #17fe4a ;
     }
 
     .sectionsbuttons{
         font-size: large;
         margin-top: 40px;
-        background-color: #4CAF50;
+        background-color: #17fe4a;
         align-items: center;
         justify-content: center;
         width: 25rem;
@@ -239,17 +285,15 @@ p.discounted-total {
     }
 
     .alfa{
-        display: grid;
         grid-template-columns: repeat(1,1fr);
-        justify-items: center;
     }
 
     #discount-input{
         border: 3px solid black;
         border-radius: 15px;
         border-radius: 15px;
-        width:200px;
-        height: 30px;
+        width:300px;
+        height: 40px;
         padding-left: 20px;
         margin-bottom: 20px;
     }

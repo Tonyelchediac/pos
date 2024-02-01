@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>POS System - Table 5</h1>
-
 <div class="alfa">
     <section>
         <h2>Menu</h2>
@@ -99,29 +98,31 @@
             </li>
         </ul>
 
-
         <section  id="summaryorder">
             <h2>Discount</h2>
             <p for="discount-input">Enter Discount (%):</p>
             <input type="number" id="discount-input" placeholder="Enter discount">
             <br>
-            <button class="button-k" onclick="applyDiscount()">Apply Discount</button>
+            <button class="button-k" onclick="applyDiscount()">Apply</button>
         </section>
     
         <section>
             <h2>Finish and Pay</h2>
-            <button class="button-k" onclick="finishAndPay()">Finish and Pay</button>
-        </section>
-    
-        
+            <br>
+            <button class="button-k" onclick="finishAndPay()">Finish & Pay</button>
+        </section>  
      </section>
      
      <section>
         <h2>Order Summary</h2>
+        <br>
         <ul id="order-summary"></ul>
-        <p>Total: LBP <span id="order-total">0</span></p>
+        <br>
+        <p class="order-total">Total: LBP <span id="order-total">0</span></p>
         <p class="discounted-total">Discounted Total: <span id="discounted-total">0</span></p>
-        <button class="button-k" onclick="sendOrderSummaryToWhatsApp()">Click to Send Order Summary</button>
+        <button class="button-k" onclick="sendOrderSummaryToWhatsApp()">Send Order to kitchen </button>
+        <br>
+        <a href="tables1.html"><button class="button-k">Back</button></a>
     </section>
 
 </div>
@@ -272,7 +273,7 @@ function finishAndPay() {
 
     orderSummary += `\nTotal: LBP ${getOrderTotal().toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`;
 
-    orderSummary += '\n\n----------------------\nThank You For Visiting Us\nPowered by TCRCs';
+    orderSummary += '\n\n----------------------\nThank You For Visiting Us\nPowered by TCRCS';
 
     window.open(`https://api.whatsapp.com/send?phone=${encodeURIComponent(recipientNumber)}&text=${encodeURIComponent(orderSummary)}`);
 
