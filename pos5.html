@@ -8,124 +8,127 @@
 </head>
 <body>
     <h1>POS System - Table 5</h1>
-<div class="alfa">
-    <section>
-        <h2>Menu</h2>
-        <ul id="menu">
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Burger', 350)">Burger 350,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Chicken Burger', 350)">Chicken Burger 350,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Small Burger', 300)">Small Burger 300,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Burger Platter', 400)">Burger Platter 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Pita Bread Burger', 350)">Pita Bread Burger 350,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Tawook Pita Bread', 350)">Tawook Pita Bread 350,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Tawook Platter', 400)">Tawook Platter 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Tawook sub', 400)">Tawook sub 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Submarine', 350)">Submarine 350,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Sausages', 350)">Sausages 350,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Sujok', 350)">Sujok 350,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Fajitas', 400)">Fajitas 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Chiken Sub', 400)">Chiken Sub 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Fries Pita Bread', 200)">Fries Pita Bread 200,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Fries Platter', 400)">Fries Platter 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Fries Sub', 400)">Fries Sub 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Pizza-Burger', 800)">Pizza-Burger 800,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Vegetarian Pizza', 550)">Vegetarian Pizza 550,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Pepperoni Pizza', 550)">Pepperoni Pizza 550,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Chicken Barbecue Pizza', 650)">Chicken Barbecue Pizza 650,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Fries Sub', 400)">Fries Sub 400,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('Pizza-Burger Offer', 500)">Pizza-Burger Offer 500,000</button>
-            </li>
-            <li>
-                <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Fies or Coleslaw', 50)">Add Fries or Coleslaw 50,000</button>
-            </li>
-            <li>
-                <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Fries & Coleslaw', 100)">Add Fries & Coleslaw 100,000</button>
-            </li>
-            <li>
-                <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Cheese', 50)">Add Cheese 50,000</button>
-            </li>
-            <li>
-                <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Garlic', 20)">Add Garlic 20,000</button>
-            </li>
-            <li>
-                <button style="color: black;" class="ordermenu" onclick="addToOrder('Soft Drinks', 50)">Soft Drinks 50,000</button>
-            </li>
-            <li>
-                <button style="color: black;" class="ordermenu" onclick="addToOrder('Water *small*', 30)">Water small 30,000</button>
-            </li>
-        </ul>
-
-        <section  id="summaryorder">
-            <h2>Discount</h2>
-            <p for="discount-input">Enter Discount (%):</p>
-            <input type="number" id="discount-input" placeholder="Enter discount">
+    <div class="alfa">
+        <section>
+            <h2>Menu</h2>
+            <ul id="menu">
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Burger', 350)">Burger 350,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Chicken Burger', 350)">Chicken Burger 350,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Small Burger', 300)">Small Burger 300,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Burger Platter', 400)">Burger Platter 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Pita Bread Burger', 350)">Pita Bread Burger 350,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Tawook Pita Bread', 350)">Tawook Pita Bread 350,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Tawook Platter', 400)">Tawook Platter 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Tawook sub', 400)">Tawook sub 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Submarine', 350)">Submarine 350,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Sausages', 350)">Sausages 350,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Sujok', 350)">Sujok 350,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Fajitas', 400)">Fajitas 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Chiken Sub', 400)">Chiken Sub 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Fries Pita Bread', 200)">Fries Pita Bread 200,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Fries Platter', 400)">Fries Platter 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Fries Sub', 400)">Fries Sub 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Pizza-Burger', 800)">Pizza-Burger 800,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Vegetarian Pizza', 550)">Vegetarian Pizza 550,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Pepperoni Pizza', 550)">Pepperoni Pizza 550,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Chicken Barbecue Pizza', 650)">Chicken Barbecue Pizza 650,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Fries Sub', 400)">Fries Sub 400,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Pizza-Burger Offer', 500)">Pizza-Burger Offer 500,000</button>
+                </li>
+                <li>
+                    <button class="ordermenu" onclick="addToOrder('Coleslaw', 150)">Coleslaw 150,000</button>
+                </li>
+                <li>
+                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Fies or Coleslaw', 50)">Add Fries or Coleslaw 50,000</button>
+                </li>
+                <li>
+                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Fries & Coleslaw', 100)">Add Fries & Coleslaw 100,000</button>
+                </li>
+                <li>
+                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Cheese', 50)">Add Cheese 50,000</button>
+                </li>
+                <li>
+                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Garlic', 20)">Add Garlic 20,000</button>
+                </li>
+                <li>
+                    <button style="color: black;" class="ordermenu" onclick="addToOrder('Soft Drinks', 50)">Soft Drinks 50,000</button>
+                </li>
+                <li>
+                    <button style="color: black;" class="ordermenu" onclick="addToOrder('Water *small*', 30)">Water small 30,000</button>
+                </li>
+            </ul>
+    
+            <section  id="summaryorder">
+                <h2>Discount</h2>
+                <p for="discount-input">Enter Discount (%):</p>
+                <input type="number" id="discount-input" placeholder="Enter discount">
+                <br>
+                <button class="button-k" onclick="applyDiscount()">Apply</button>
+            </section>
+        
+            <section>
+                <h2>Finish and Pay</h2>
+                <br>
+                <button class="button-k" onclick="finishAndPay()">Finish & Pay</button>
+            </section>  
+         </section>
+         
+         <section>
+            <h2>Order Summary</h2>
             <br>
-            <button class="button-k" onclick="applyDiscount()">Apply</button>
+            <ul id="order-summary"></ul>
+            <br>
+            <p class="order-total">Total: LBP <span id="order-total">0</span></p>
+            <p class="discounted-total">Discounted Total: <span id="discounted-total">0</span></p>
+            <button class="button-k" onclick="sendOrderSummaryToWhatsApp()">Send Order to kitchen </button>
+            <br>
+            <a href="tables1.html"><button class="button-k">Back</button></a>
         </section>
     
-        <section>
-            <h2>Finish and Pay</h2>
-            <br>
-            <button class="button-k" onclick="finishAndPay()">Finish & Pay</button>
-        </section>  
-     </section>
-     
-     <section>
-        <h2>Order Summary</h2>
-        <br>
-        <ul id="order-summary"></ul>
-        <br>
-        <p class="order-total">Total: LBP <span id="order-total">0</span></p>
-        <p class="discounted-total">Discounted Total: <span id="discounted-total">0</span></p>
-        <button class="button-k" onclick="sendOrderSummaryToWhatsApp()">Send Order to kitchen </button>
-        <br>
-        <a href="tables1.html"><button class="button-k">Back</button></a>
-    </section>
-
-</div>
+    </div>
 
     <script>
     let order = [];
