@@ -172,6 +172,16 @@ button:hover {
     color: blue;
 }
 
+.pos-summary-details{
+    width: 58rem;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 5px 0 5px 15px;
+    color: #17fe4a;
+    font-weight: bold;
+    margin: 10px 0 10px 0; 
+}
+
 p.discounted-total {
     color: #17fe4a;
     font-weight: bold;
@@ -296,6 +306,16 @@ p.discounted-total {
         height: 40px;
         padding-left: 20px;
         margin-bottom: 20px;
+    }
+
+    .pos-summary-details{
+        width: 34rem;
+        border: 3px solid black;
+        border-radius: 15px;
+        padding: 5px 0 5px 15px;
+        color: #17fe4a;
+        font-weight: bold;
+        margin: 10px 0 10px 0; 
     }
 
 
