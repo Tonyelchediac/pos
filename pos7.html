@@ -184,7 +184,7 @@
             let summaryText = 'Order Summary - Table 7:\n\n';
     
             order.forEach((item) => {
-                summaryText += `${item.item} - LBP ${item.price.toLocaleString()},000\n`;
+                summaryText += `${item.item}\n`;
             });
     
             const discount = getDiscountInfo();
@@ -322,24 +322,32 @@
 }
 
     
-        function calculateTotal() {
-            const calculateInput = prompt('Enter a number to subtract from the total:\n*Enter the number without the 000*');
-            const enteredValue = parseFloat(calculateInput);
-    
-            if (isNaN(enteredValue)) {
-                alert('Please enter a valid number.');
-                return;
-            }
-    
-            const newTotal = getOrderTotal() - enteredValue;
-    
-            alert(`New Total after subtraction: LBP ${newTotal.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`);
-            resetOrder();
-            order = [];
-            updateOrderSummary();
-            saveOrderToLocalStorage();
-            alert('Order completed and paid successfully!');
-        }
+function calculateTotal() {
+    const calculateInput = prompt('Enter a number to subtract from the total:\n*Enter the number without the 000*');
+    const enteredValue = parseFloat(calculateInput);
+
+    if (isNaN(enteredValue)) {
+        alert('Please enter a valid number.');
+        return;
+    }
+
+    let newTotal = getOrderTotal();
+
+    const discountInfo = getDiscountInfo();
+    if (discountInfo) {
+        const discountAmount = (discountInfo / 100) * getOrderTotal();
+        newTotal -= discountAmount;
+    }
+
+    newTotal -= enteredValue;
+
+    alert(`New Total after subtraction: LBP ${newTotal.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`);
+    resetOrder();
+    order = [];
+    updateOrderSummary();
+    saveOrderToLocalStorage();
+    alert('Order completed and paid successfully!');
+}
     
         function saveOrderToLocalStorage() {
             localStorage.setItem(`order_${currentPage}`, JSON.stringify(order));
