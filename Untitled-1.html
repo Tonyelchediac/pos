@@ -51,6 +51,9 @@
     <div>
     <button class="button-k" onclick="clearAll()">Clear All</button>
     </div>
+    <a href="index.html" class="button-a">
+        <button class="ordermenu"><b>Back</b></button>
+    </a>
 
     <script>
         // Function to refresh counts and prices
@@ -229,6 +232,7 @@
             localStorage.removeItem('burgerPlatterClicks');
             localStorage.removeItem('pitabreadburgerClicks');
             localStorage.removeItem('tawookplatterClicks');
+            localStorage.removeItem('tawookpitabreadClicks');
             localStorage.removeItem('tawooksubClicks');
             localStorage.removeItem('addfriesorcoleslawClicks');
             localStorage.removeItem('addfriesandcoleslawClicks');
@@ -253,6 +257,7 @@
             document.getElementById('pitabreadburger-clicks').innerText = '';
             document.getElementById('total-pitabreadburgerprice').innerText = '';
             document.getElementById('total-tawookplatterprice').innerText = '';
+            document.getElementById('total-tawookpitabreadprice').innerText = '';
             document.getElementById('total-tawooksubprice').innerText = '';
             document.getElementById('total-addfriesorcoleslawprice').innerText = '';
             document.getElementById('total-addfriesandcoleslawprice').innerText = '';
