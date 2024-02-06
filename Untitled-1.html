@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clicks and Total Price</title>
+</head>
+<body>
+    <h3>Burger Clicks: <span id="burger-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-burgerprice"></span></label></h3>
+    <br>
+    <h3>Chicken Burger Clicks: <span id="chickenburger-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-chickenburgerprice"></span></label></h3>
+    <br>
+    <h3>Small Burger Clicks: <span id="smallburger-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-smallburgerprice"></span></label></h3>
+    <br>
+    <h3>Burger Platter Clicks: <span id="burgerplatter-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-burgerplatterprice"></span></label></h3>
+    <br>
+    <h3>Pita Bread Burger Clicks: <span id="pitabreadburger-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-pitabreadburgerprice"></span></label></h3>
+    <br>
+    <h3>Tawook Pita Bread Clicks: <span id="tawookpitabread-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-tawookpitabreadprice"></span></label></h3>
+    <br>
+    <h3>Tawook Platter Clicks: <span id="tawookplatter-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-tawookplatterprice"></span></label></h3>
+    <br>
+    <h3>Tawook Sub Clicks: <span id="tawooksub-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-tawooksubprice"></span></label></h3>
+    <br>
+    <h3>Add Fries or Coleslaw Clicks: <span id="addfriesorcoleslaw-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addfriesorcoleslawprice"></span></label></h3>
+    <br>
+    <h3>Add Fries and Coleslaw Clicks: <span id="addfriesandcoleslaw-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addfriesandcoleslawprice"></span></label></h3>
+    <br>
+    <h3>Add Cheese Clicks: <span id="addcheese-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addcheeseprice"></span></label></h3>
+    <br>
+    <h3>Add Garlic Clicks: <span id="addgarlic-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addgarlicprice"></span></label></h3>
+    <br>
+    <h3>Add Pepsi Clicks: <span id="addpepsi-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addpepsiprice"></span></label></h3>
+    <br>
+    <h3>Add Pepsi Diet Clicks: <span id="addpepsidiet-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addpepsidietprice"></span></label></h3>
+    <br>
+    <h3>Add 7UP Clicks: <span id="add7up-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-add7upprice"></span></label></h3>
+    <br>
+    <h3>Add 7UP Diet Clicks: <span id="add7updiet-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-add7updietprice"></span></label></h3>
+    <br>
+    <h3>Add Miranda Clicks: <span id="addmiranda-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addmirandaprice"></span></label></h3>
+    <br>
+    <h3>Add Water Clicks: <span id="addwater-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addwaterprice"></span></label></h3>
+    <br>
+
+    <!-- Buttons to refresh counts and clear all -->
+    <div>
+    <button class="button-k" onclick="refreshCounts()">Refresh All</button>
+    </div>
+    <div>
+    <button class="button-k" onclick="clearAll()">Clear All</button>
+    </div>
+
+    <script>
+        // Function to refresh counts and prices
+        function refreshCounts() {
+            let retrievedBurgerClicks = localStorage.getItem('burgerClicks');
+            if (retrievedBurgerClicks) {
+                let burgerClicks = parseFloat(retrievedBurgerClicks);
+                let multipliedBurgerPrice = burgerClicks * 3.5;
+                document.getElementById('burger-clicks').innerText = `${burgerClicks}`;
+                document.getElementById('total-burgerprice').innerText = `${multipliedBurgerPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Chicken Burger Clicks
+            let retrievedChickenBurgerClicks = localStorage.getItem('chickenburgerClicks');
+            if (retrievedChickenBurgerClicks) {
+                let chickenBurgerClicks = parseFloat(retrievedChickenBurgerClicks);
+                let multipliedChickenBurgerPrice = chickenBurgerClicks * 3.5;
+                document.getElementById('chickenburger-clicks').innerText = `${chickenBurgerClicks}`;
+                document.getElementById('total-chickenburgerprice').innerText = `${multipliedChickenBurgerPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Small Burger Clicks
+            let retrievedSmallBurgerClicks = localStorage.getItem('smallBurgerClicks');
+            if (retrievedSmallBurgerClicks) {
+                let smallBurgerClicks = parseFloat(retrievedSmallBurgerClicks);
+                let multipliedSmallBurgerPrice = smallBurgerClicks * 3;
+                document.getElementById('smallburger-clicks').innerText = `${smallBurgerClicks}`;
+                document.getElementById('total-smallburgerprice').innerText = `${multipliedSmallBurgerPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Burger Platter Clicks
+            let retrievedBurgerPlatterClicks = localStorage.getItem('burgerPlatterClicks');
+            if (retrievedBurgerPlatterClicks) {
+                let burgerPlatterClicks = parseFloat(retrievedBurgerPlatterClicks);
+                let multipliedBurgerPlatterPrice = burgerPlatterClicks * 4;
+                document.getElementById('burgerplatter-clicks').innerText = `${burgerPlatterClicks}`;
+                document.getElementById('total-burgerplatterprice').innerText = `${multipliedBurgerPlatterPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Pita Bread Burger Clicks
+            let retrievedPitaBreadBurgerClicks = localStorage.getItem('pitabreadburgerClicks');
+            if (retrievedPitaBreadBurgerClicks) {
+                let pitaBreadBurgerClicks = parseFloat(retrievedPitaBreadBurgerClicks);
+                let multipliedPitaBreadBurgerPrice = pitaBreadBurgerClicks * 3.5;
+                document.getElementById('pitabreadburger-clicks').innerText = `${pitaBreadBurgerClicks}`;
+                document.getElementById('total-pitabreadburgerprice').innerText = `${multipliedPitaBreadBurgerPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Tawook Pita Bread Clicks
+            let retrievedTawookPitaBreadClicks = localStorage.getItem('tawookpitabreadClicks');
+            if (retrievedTawookPitaBreadClicks) {
+                let tawookPitaBreadClicks = parseFloat(retrievedTawookPitaBreadClicks);
+                let multipliedTawookPitaBreadPrice = tawookPitaBreadClicks * 3.5;
+                document.getElementById('tawookpitabread-clicks').innerText = `${tawookPitaBreadClicks}`;
+                document.getElementById('total-tawookpitabreadprice').innerText = `${multipliedTawookPitaBreadPrice.toFixed(2)}`;
+            }
+            
+            // Retrieve and display Tawook Platter Clicks
+            let retrievedTawookPlatterClicks = localStorage.getItem('tawookplatterClicks');
+            if (retrievedTawookPlatterClicks) {
+                let tawookPlatterClicks = parseFloat(retrievedTawookPlatterClicks);
+                let multipliedTawookPlatterPrice = tawookPlatterClicks * 4;
+                document.getElementById('tawookplatter-clicks').innerText = `${tawookPlatterClicks}`;
+                document.getElementById('total-tawookplatterprice').innerText = `${multipliedTawookPlatterPrice.toFixed(2)}`;
+            }
+            
+            // Retrieve and display Tawook Sub Clicks
+            let retrievedTawookSubClicks = localStorage.getItem('tawooksubClicks');
+            if (retrievedTawookSubClicks) {
+                let tawookSubClicks = parseFloat(retrievedTawookSubClicks);
+                let multipliedTawookSubPrice = tawookSubClicks * 4;
+                document.getElementById('tawooksub-clicks').innerText = `${tawookSubClicks}`;
+                document.getElementById('total-tawooksubprice').innerText = `${multipliedTawookSubPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add Fries or Coleslaw Clicks
+            let retrievedAddFriesOrColeslawClicks = localStorage.getItem('addfriesorcoleslawClicks');
+            if (retrievedAddFriesOrColeslawClicks) {
+                let addFriesOrColeslawClicks = parseFloat(retrievedAddFriesOrColeslawClicks);
+                let multipliedAddFriesOrColeslawPrice = addFriesOrColeslawClicks * 0.5;
+                document.getElementById('addfriesorcoleslaw-clicks').innerText = `${addFriesOrColeslawClicks}`;
+                document.getElementById('total-addfriesorcoleslawprice').innerText = `${multipliedAddFriesOrColeslawPrice.toFixed(2)}`;
+            }
+
+            //Retrieve and display add fries and caleslaw Clicks
+            let retrievedAddFriesAndColeslawClicks = localStorage.getItem('addfriesandcoleslawClicks');
+            if (retrievedAddFriesAndColeslawClicks) {
+                let addFriesAndColeslawClicks = parseFloat(retrievedAddFriesAndColeslawClicks);
+                let multipliedAddFriesAndColeslawPrice = addFriesAndColeslawClicks * 1;
+                document.getElementById('addfriesandcoleslaw-clicks').innerText = `${addFriesAndColeslawClicks}`;
+                document.getElementById('total-addfriesandcoleslawprice').innerText = `${multipliedAddFriesAndColeslawPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add Cheese Clicks
+            let retrievedAddCheeseClicks = localStorage.getItem('addcheeseClicks');
+            if (retrievedAddCheeseClicks) {
+                let addCheeseClicks = parseFloat(retrievedAddCheeseClicks);
+                let multipliedAddCheesePrice = addCheeseClicks * 1.5;
+                document.getElementById('addcheese-clicks').innerText = `${addCheeseClicks}`;
+                document.getElementById('total-addcheeseprice').innerText = `${multipliedAddCheesePrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add Garlic Clicks
+            let retrievedAddGarlicClicks = localStorage.getItem('addgarlicClicks');
+            if (retrievedAddGarlicClicks) {
+                let addGarlicClicks = parseFloat(retrievedAddGarlicClicks);
+                let multipliedAddGarlicPrice = addGarlicClicks * 1;
+                document.getElementById('addgarlic-clicks').innerText = `${addGarlicClicks}`;
+                document.getElementById('total-addgarlicprice').innerText = `${multipliedAddGarlicPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add Pepsi Clicks
+            let retrievedAddPepsiClicks = localStorage.getItem('addpepsiClicks');
+            if (retrievedAddPepsiClicks) {
+                let addPepsiClicks = parseFloat(retrievedAddPepsiClicks);
+                let multipliedAddPepsiPrice = addPepsiClicks * 1.25;
+                document.getElementById('addpepsi-clicks').innerText = `${addPepsiClicks}`;
+                document.getElementById('total-addpepsiprice').innerText = `${multipliedAddPepsiPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add Pepsi Diet Clicks
+            let retrievedAddPepsiDietClicks = localStorage.getItem('addpepsidietClicks');
+            if (retrievedAddPepsiDietClicks) {
+                let addPepsiDietClicks = parseFloat(retrievedAddPepsiDietClicks);
+                let multipliedAddPepsiDietPrice = addPepsiDietClicks * 1.25;
+                document.getElementById('addpepsidiet-clicks').innerText = `${addPepsiDietClicks}`;
+                document.getElementById('total-addpepsidietprice').innerText = `${multipliedAddPepsiDietPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add 7UP Clicks
+            let retrievedAdd7UPClicks = localStorage.getItem('add7upClicks');
+            if (retrievedAdd7UPClicks) {
+                let add7UPClicks = parseFloat(retrievedAdd7UPClicks);
+                let multipliedAdd7UPPrice = add7UPClicks * 1.25;
+                document.getElementById('add7up-clicks').innerText = `${add7UPClicks}`;
+                document.getElementById('total-add7upprice').innerText = `${multipliedAdd7UPPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add 7UP Diet Clicks
+            let retrievedAdd7UPDietClicks = localStorage.getItem('add7updietClicks');
+            if (retrievedAdd7UPDietClicks) {
+                let add7UPDietClicks = parseFloat(retrievedAdd7UPDietClicks);
+                let multipliedAdd7UPDietPrice = add7UPDietClicks * 1.25;
+                document.getElementById('add7updiet-clicks').innerText = `${add7UPDietClicks}`;
+                document.getElementById('total-add7updietprice').innerText = `${multipliedAdd7UPDietPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add Miranda Clicks
+            let retrievedAddMirandaClicks = localStorage.getItem('addmirandaClicks');
+            if (retrievedAddMirandaClicks) {
+                let addMirandaClicks = parseFloat(retrievedAddMirandaClicks);
+                let multipliedAddMirandaPrice = addMirandaClicks * 1.25;
+                document.getElementById('addmiranda-clicks').innerText = `${addMirandaClicks}`;
+                document.getElementById('total-addmirandaprice').innerText = `${multipliedAddMirandaPrice.toFixed(2)}`;
+            }
+
+            // Retrieve and display Add Water Clicks
+            let retrievedAddWaterClicks = localStorage.getItem('addwaterClicks');
+            if (retrievedAddWaterClicks) {
+                let addWaterClicks = parseFloat(retrievedAddWaterClicks);
+                let multipliedAddWaterPrice = addWaterClicks * 1;
+                document.getElementById('addwater-clicks').innerText = `${addWaterClicks}`;
+                document.getElementById('total-addwaterprice').innerText = `${multipliedAddWaterPrice.toFixed(2)}`;
+            }
+
+    
+        }
+
+        // Function to clear all values
+        function clearAll() {
+            window.confirm("Are You Sure !!");
+            if (confirm("Are You Sure Again !!")) {
+            localStorage.removeItem('burgerClicks');
+            localStorage.removeItem('chickenburgerClicks');
+            localStorage.removeItem('smallBurgerClicks');
+            localStorage.removeItem('burgerPlatterClicks');
+            localStorage.removeItem('pitabreadburgerClicks');
+            localStorage.removeItem('tawookplatterClicks');
+            localStorage.removeItem('tawooksubClicks');
+            localStorage.removeItem('addfriesorcoleslawClicks');
+            localStorage.removeItem('addfriesandcoleslawClicks');
+            localStorage.removeItem('addcheeseClicks');
+            localStorage.removeItem('addgarlicClicks');
+            localStorage.removeItem('addpepsiClicks');
+            localStorage.removeItem('addpepsidietClicks');
+            localStorage.removeItem('add7upClicks');
+            localStorage.removeItem('add7updietClicks');
+            localStorage.removeItem('addmirandaClicks');
+            localStorage.removeItem('addwaterClicks');
+
+            // Reset the displayed values to empty
+            document.getElementById('burger-clicks').innerText = '';
+            document.getElementById('total-burgerprice').innerText = '';
+            document.getElementById('chickenburger-clicks').innerText = '';
+            document.getElementById('total-chickenburgerprice').innerText = '';
+            document.getElementById('smallburger-clicks').innerText = '';
+            document.getElementById('total-smallburgerprice').innerText = '';
+            document.getElementById('burgerplatter-clicks').innerText = '';
+            document.getElementById('total-burgerplatterprice').innerText = '';
+            document.getElementById('pitabreadburger-clicks').innerText = '';
+            document.getElementById('total-pitabreadburgerprice').innerText = '';
+            document.getElementById('total-tawookplatterprice').innerText = '';
+            document.getElementById('total-tawooksubprice').innerText = '';
+            document.getElementById('total-addfriesorcoleslawprice').innerText = '';
+            document.getElementById('total-addfriesandcoleslawprice').innerText = '';
+            document.getElementById('total-addcheeseprice').innerText = '';
+            document.getElementById('total-addpepsiprice').innerText = '';
+            document.getElementById('total-addpepsidietprice').innerText = '';
+            document.getElementById('total-add7upprice').innerText = '';
+            document.getElementById('total-add7updietprice').innerText = '';
+            document.getElementById('total-addmirandaprice').innerText = '';
+            document.getElementById('total-addwaterprice').innerText = '';
+            }
+
+
+        }
+
+        // Call the function on page load
+        refreshCounts();
+    </script>
+</body>
+</html>

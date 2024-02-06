@@ -8,9 +8,12 @@
   <script>
     function checkPasscode() {
     var correctPasscode = "2580";
+    var correctPasscode1 = "2003";
     var userPasscode = document.getElementById("passcode").value;
     if (userPasscode === correctPasscode) {
       window.location.href = "sections.html";
+    } else if(userPasscode === correctPasscode1){
+      window.location.href = "Untitled-1.html";
     } else {
       alert("Incorrect passcode. Please try again.");
       document.getElementById("passcodeForm").reset();

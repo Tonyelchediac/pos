@@ -11,118 +11,68 @@
     <div class="alfa">
         <section>
             <h2>Menu</h2>
-            <details>
-                <summary class="pos-summary-details">Eating Menu</summary>
-            <ul id="menu">
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Burger', 350)">Burger 350,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Chicken Burger', 350)">Chicken Burger 350,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Small Burger', 300)">Small Burger 300,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Burger Platter', 400)">Burger Platter 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Pita Bread Burger', 350)">Pita Bread Burger 350,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Tawook Pita Bread', 350)">Tawook Pita Bread 350,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Tawook Platter', 400)">Tawook Platter 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Tawook sub', 400)">Tawook sub 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Submarine', 350)">Submarine 350,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Sausages', 350)">Sausages 350,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Sujok', 350)">Sujok 350,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Fajitas', 400)">Fajitas 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Chiken Sub', 400)">Chiken Sub 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Fries Pita Bread', 200)">Fries Pita Bread 200,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Fries Platter', 400)">Fries Platter 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Fries Sub', 400)">Fries Sub 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Pizza-Burger', 800)">Pizza-Burger 800,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Vegetarian Pizza', 550)">Vegetarian Pizza 550,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Pepperoni Pizza', 550)">Pepperoni Pizza 550,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Chicken Barbecue Pizza', 650)">Chicken Barbecue Pizza 650,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Fries Sub', 400)">Fries Sub 400,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Pizza-Burger Offer', 500)">Pizza-Burger Offer 500,000</button>
-                </li>
-                <li>
-                    <button class="ordermenu" onclick="addToOrder('Coleslaw', 150)">Coleslaw 150,000</button>
-                </li>
-                <li>
-                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Fies or Coleslaw', 50)">Add Fries or Coleslaw 50,000</button>
-                </li>
-                <li>
-                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Fries & Coleslaw', 100)">Add Fries & Coleslaw 100,000</button>
-                </li>
-                <li>
-                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Cheese', 50)">Add Cheese 50,000</button>
-                </li>
-                <li>
-                    <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Garlic', 20)">Add Garlic 20,000</button>
-                </li>
-            </ul>
-        </details>
-        <details>
+<details id="menu-details">
+    <summary class="pos-summary-details">Eating Menu</summary>
+    <ul id="menu">
+        <li>
+            <button class="ordermenu" id="burger" onclick="addToOrder('Burger', 3.5, 1);">Burger 3.5$</button>
+        </li>
+        <li>
+            <button class="ordermenu" id="chickenburger"  onclick="addToOrder('Chicken Burger', 3.5, 1);">Chicken Burger 3.5$</button>
+        </li>
+        <li>
+            <button class="ordermenu" id="smallBurger" onclick="addToOrder('Small Burger', 3, 1);">Small Burger 3$</button>
+        </li>
+        <!-- Add onclick attribute to the following li buttons -->
+        <li>
+            <button class="ordermenu" id="burgerPlatter" onclick="addToOrder('Burger Platter', 4, 1);">Burger Platter 4$</button>
+        </li>
+        <li>
+            <button class="ordermenu" id="pitabreadburger" onclick="addToOrder('Pita Bread Burger', 3.5, 1);">Pita Bread Burger 3.5$</button>
+        </li>
+        <li>
+            <button class="ordermenu" id="tawookpitabread" onclick="addToOrder('Tawook Pita Bread', 3.5, 1);">Tawook Pita Bread 3.5$</button>
+        </li>
+        <li>
+            <button class="ordermenu" id="tawwokplatter" onclick="addToOrder('Tawook Platter', 4, 1);">Tawook Platter 4$</button>
+        </li>
+        <li>
+            <button class="ordermenu" id="tawooksub" onclick="addToOrder('Tawook Sub', 4, 1);">Tawook Sub 4$</button>
+        </li>
+        <li>
+            <button style="color: red;" class="ordermenu" id="addfriesorcoleslaw" onclick="addToOrder('Add Fries or Coleslaw', 0.5, 1);">Add Fries or Coleslaw 0.5$</button>
+        </li>
+        <li>
+            <button style="color: red;" class="ordermenu" id="addfriesandcoleslaw" onclick="addToOrder('Add Fries and Coleslaw', 1, 1);">Add Fries and Coleslaw 1$</button>
+        </li>
+        <li>
+            <button style="color: red;" class="ordermenu" id="addcheese" onclick="addToOrder('Add Cheese', 1.5, 1);">Add Cheese 1.5$</button>
+        </li>
+        <li>
+            <button style="color: red;" class="ordermenu" id="addgarlic" onclick="addToOrder('Add Garlic', 1, 1);">Add Garlic 1$</button>
+        </li>
+    </ul>
+</details>
+        <details id="drinks-details">
             <summary class="pos-summary-details">Drinks</summary>
         <ul id="menu">
             <li>
-                <button class="ordermenu" onclick="addToOrder('PEPSI', 50)">PEPSI 50,000</button>
+                <button class="ordermenu" id="addpepsi" onclick="addToOrder('Add Pepsi', 1.25, 1);">Add Pepsi 1.25$</button>
             </li>
             <li>
-                <button class="ordermenu" onclick="addToOrder('PEPSI DIET', 50)">PEPSI DIET 50,000</button>
+                <button class="ordermenu" id="addpepsidiet" onclick="addToOrder('Add Pepsi Diet', 1.25, 1);">Add Pepsi Diet 1.25$</button>
             </li>
             <li>
-                <button class="ordermenu" onclick="addToOrder('MIRANDA', 50)">MIRANDA 50,000</button>
+                <button class="ordermenu" id="add7up" onclick="addToOrder('Add 7UP', 1.25, 1);">Add 7UP 1.25$</button>
             </li>
             <li>
-                <button class="ordermenu" onclick="addToOrder('MIRANDA DIET', 50)">MIRANDA DIET 50,000</button>
+                <button class="ordermenu" id="add7updiet" onclick="addToOrder('Add 7UP Diet', 1.25, 1);">Add 7UP Diet 1.25$</button>
             </li>
             <li>
-                <button class="ordermenu" onclick="addToOrder('7UP', 50)">7UP 50,000</button>
+                <button class="ordermenu" id="addmiranda" onclick="addToOrder('Add Miranda', 1.25, 1);">Add Miranda 1.25$</button>
             </li>
             <li>
-                <button class="ordermenu" onclick="addToOrder('7UP DIET', 50)">7UP DIET 50,000</button>
-            </li>
-            <li>
-                <button class="ordermenu" onclick="addToOrder('WATER', 30)">WATER 30,000</button>
-            </li>
-            <li>
-                <button style="color: red;" class="ordermenu" onclick="addToOrder('Add Lemon Slice', 0)">Add Lemon SLice 000</button>
+                <button class="ordermenu" id="addwater" onclick="addToOrder('Add Water', 1, 1);">Add Water 1$</button>
             </li>
         </ul>
     </details>
@@ -153,7 +103,7 @@
             <br>
             <ul id="order-summary"></ul>
             <br>
-            <p class="order-total">Total: LBP <span id="order-total">0</span></p>
+            <p class="order-total">Total: $ <span id="order-total">0</span></p>
             <p class="discounted-total">Discounted Total: <span id="discounted-total">0</span></p>
             <button class="button-k" onclick="sendOrderSummaryToWhatsApp()">Send Order to kitchen </button>
             <br>
@@ -162,6 +112,25 @@
     </div>
 <!--JS----------------------------------------------------------------------------------------------------------->
     <script>
+
+        function closeAllDetailsExcept(openDetails) {
+  const allDetails = document.getElementsByTagName('details');
+  for (let i = 0; i < allDetails.length; i++) {
+    if (allDetails[i] !== openDetails) {
+      allDetails[i].open = false;
+    }
+  }
+}
+const menuDetails = document.getElementById('menu-details');
+menuDetails.addEventListener('click', function() {
+  closeAllDetailsExcept(menuDetails);
+});
+
+const drinksDetails = document.getElementById('drinks-details');
+drinksDetails.addEventListener('click', function() {
+  closeAllDetailsExcept(drinksDetails);
+});
+/////////////////////////////////////////////////////////////////
         let order = [];
         const currentPage = window.location.pathname;
     
@@ -182,7 +151,7 @@
     
         function getOrderSummaryText() {
             let summaryText = 'Order Summary - Table 2:\n\n';
-
+    
             order.forEach((item) => {
                 summaryText += `${item.item}\n`;
             });
@@ -205,16 +174,179 @@
     
             return null;
         }
-    
-        function addToOrder(item, price) {
-            order.push({ item, price });
+
+        function clearAll() {
+            // Clear the click counts for each item
+            burgerClicks = 0;
+            chickenBurgerClicks = 0;
+            smallBurgerClicks = 0;
+            burgerPlatterClicks = 0;
+            pitabreadburgerClicks = 0;
+            tawookpitabreadClicks = 0;
+            tawookplatterClicks = 0;
+            tawooksubClicks = 0;
+            addfriesorcoleslawClicks = 0;
+            addfriesandcoleslawClicks = 0;
+            addcheeseClicks = 0;
+            addgarlicClicks = 0;
+            addpepsiClicks = 0;
+            addpepsidietClicks = 0;
+            add7upClicks = 0;
+            add7updietClicks = 0;
+            addmirandaClicks = 0;
+            addwaterClicks = 0;
+            
             updateOrderSummary();
             saveOrderToLocalStorage();
         }
-    
-        function removeItem(index) {
+
+        
+            // Your existing variables for click counts
+            let burgerClicks = parseInt(localStorage.getItem('burgerClicks')) || 0;
+            let chickenBurgerClicks = parseInt(localStorage.getItem('chickenburgerClicks')) || 0;
+            let smallBurgerClicks = parseInt(localStorage.getItem('smallBurgerClicks')) || 0;
+            let burgerPlatterClicks = parseInt(localStorage.getItem('burgerPlatterClicks')) || 0;
+            let pitabreadburgerClicks = parseInt(localStorage.getItem('pitabreadburgerClicks')) || 0;
+            let tawookpitabreadClicks = parseInt(localStorage.getItem('tawookpitabreadClicks')) || 0;
+            let tawookplatterClicks = parseInt(localStorage.getItem('tawookplatterClicks')) || 0;
+            let tawooksubClicks = parseInt(localStorage.getItem('tawooksubClicks')) || 0;
+            let addfriesorcoleslawClicks = parseInt(localStorage.getItem('addfriesorcoleslawClicks')) || 0;
+            let addfriesandcoleslawClicks = parseInt(localStorage.getItem('addfriesandcoleslawClicks')) || 0;
+            let addcheeseClicks = parseInt(localStorage.getItem('addcheeseClicks')) || 0;
+            let addgarlicClicks = parseInt(localStorage.getItem('addgarlicClicks')) || 0;
+            let addpepsiClicks = parseInt(localStorage.getItem('addpepsiClicks')) || 0;
+            let addpepsidietClicks = parseInt(localStorage.getItem('addpepsidietClicks')) || 0;
+            let add7upClicks = parseInt(localStorage.getItem('add7upClicks')) || 0;
+            let add7updietClicks = parseInt(localStorage.getItem('add7updietClicks')) || 0;
+            let addmirandaClicks = parseInt(localStorage.getItem('addmirandaClicks')) || 0;
+            let addwaterClicks = parseInt(localStorage.getItem('addwaterClicks')) || 0;
+
+
+        function addToOrder(itemName, price, clicks = 1) {
+            const itemClicks = clicks;
+
+            order.push({ item: itemName, price: parseFloat(price), clicks: itemClicks });
+            updateOrderSummary();
+            saveOrderToLocalStorage();
+
+            if (itemName === 'Burger') {
+                burgerClicks += itemClicks;
+                localStorage.setItem('burgerClicks', burgerClicks);
+            } else if (itemName === 'Chicken Burger') {
+                chickenBurgerClicks += itemClicks;
+                localStorage.setItem('chickenburgerClicks', chickenBurgerClicks);
+            } else if (itemName === 'Small Burger') {
+                smallBurgerClicks += itemClicks;
+                localStorage.setItem('smallBurgerClicks', smallBurgerClicks);
+            } else if (itemName === 'Burger Platter') {
+                burgerPlatterClicks += itemClicks;
+                localStorage.setItem('burgerPlatterClicks', burgerPlatterClicks);
+            } else if (itemName === 'Pita Bread Burger') {
+                pitabreadburgerClicks += itemClicks;
+                localStorage.setItem('pitabreadburgerClicks', pitabreadburgerClicks);
+            } else if (itemName === 'Tawook Pita Bread') {
+                tawookpitabreadClicks += itemClicks;
+                localStorage.setItem('tawookpitabreadClicks', tawookpitabreadClicks);
+            } else if (itemName === 'Tawook Platter') {
+                tawookplatterClicks += itemClicks;
+                localStorage.setItem('tawookplatterClicks', tawookplatterClicks);
+            } else if (itemName === 'Tawook Sub') {
+                tawooksubClicks += itemClicks;
+                localStorage.setItem('tawooksubClicks', tawooksubClicks);
+            } else if (itemName === 'Add Fries or Coleslaw') {
+                addfriesorcoleslawClicks += itemClicks;
+                localStorage.setItem('addfriesorcoleslawClicks', addfriesorcoleslawClicks);
+            } else if (itemName === 'Add Fries and Coleslaw') {
+                addfriesandcoleslawClicks += itemClicks;
+                localStorage.setItem('addfriesandcoleslawClicks', addfriesandcoleslawClicks);
+            } else if (itemName === 'Add Cheese') {
+                addcheeseClicks += itemClicks;
+                localStorage.setItem('addcheeseClicks', addcheeseClicks);
+            } else if (itemName === 'Add Garlic') {
+                addgarlicClicks += itemClicks;
+                localStorage.setItem('addgarlicClicks', addgarlicClicks);
+            } else if (itemName === 'Add Pepsi') {
+                addpepsiClicks += itemClicks;
+                localStorage.setItem('addpepsiClicks', addpepsiClicks);
+            } else if (itemName === 'Add Pepsi Diet') {
+                addpepsidietClicks += itemClicks;
+                localStorage.setItem('addpepsidietClicks', addpepsidietClicks);
+            } else if (itemName === 'Add 7UP') {
+                add7upClicks += itemClicks;
+                localStorage.setItem('add7upClicks', add7upClicks);
+            } else if (itemName === 'Add 7UP Diet') {
+                add7updietClicks += itemClicks;
+                localStorage.setItem('add7updietClicks', add7updietClicks);
+            } else if (itemName === 'Add Miranda') {
+                addmirandaClicks += itemClicks;
+                localStorage.setItem('addmirandaClicks', addmirandaClicks);
+            } else if (itemName === 'Add Water') {
+                addwaterClicks += itemClicks;
+                localStorage.setItem('addwaterClicks', addwaterClicks);
+            }
+        }
+
+        function removeItem(index, itemName) {
+            const item = order[index];
             order.splice(index, 1);
             updateOrderSummary();
+
+            if (itemName === 'Burger') {
+                burgerClicks -= item.clicks;
+                localStorage.setItem('burgerClicks', burgerClicks);
+            } else if (itemName === 'Chicken Burger') {
+                chickenBurgerClicks -= item.clicks;
+                localStorage.setItem('chickenburgerClicks', chickenBurgerClicks);
+            } else if (itemName === 'Small Burger') {
+                smallBurgerClicks -= item.clicks;
+                localStorage.setItem('smallBurgerClicks', smallBurgerClicks);
+            } else if (itemName === 'Burger Platter') {
+                burgerPlatterClicks -= item.clicks;
+                localStorage.setItem('burgerPlatterClicks', burgerPlatterClicks);
+            } else if (itemName === 'Pita Bread Burger') {
+                pitabreadburgerClicks -= item.clicks;
+                localStorage.setItem('pitabreadburgerClicks', pitabreadburgerClicks);
+            } else if (itemName === 'Tawook Pita Bread') {
+                tawookpitabreadClicks -= item.clicks;
+                localStorage.setItem('tawookpitabreadClicks', tawookpitabreadClicks);
+            } else if (itemName === 'Tawook Platter') {
+                tawookplatterClicks -= item.clicks;
+                localStorage.setItem('tawookplatterClicks', tawookplatterClicks);
+            } else if (itemName === 'Tawook Sub') {
+                tawooksubClicks -= item.clicks;
+                localStorage.setItem('tawooksubClicks', tawooksubClicks);
+            } else if (itemName === 'Add Fries or Coleslaw') {
+                addfriesorcoleslawClicks -= item.clicks;
+                localStorage.setItem('addfriesorcoleslawClicks', addfriesorcoleslawClicks);
+            } else if (itemName === 'Add Fries and Coleslaw') {
+                addfriesandcoleslawClicks -= item.clicks; 
+                localStorage.setItem('addfriesandcoleslawClicks', addfriesandcoleslawClicks);
+            } else if (itemName === 'Add Cheese') {
+                addcheeseClicks -= item.clicks;
+                localStorage.setItem('addcheeseClicks', addcheeseClicks);
+            } else if (itemName === 'Add Garlic') {
+                addgarlicClicks -= item.clicks;
+                localStorage.setItem('addgarlicClicks', addgarlicClicks);
+            } else if (itemName === 'Add Pepsi') {
+                addpepsiClicks -= item.clicks;
+                localStorage.setItem('addpepsiClicks', addpepsiClicks);
+            } else if (itemName === 'Add Pepsi Diet') {
+                addpepsidietClicks -= item.clicks;
+                localStorage.setItem('addpepsidietClicks', addpepsidietClicks);
+            } else if (itemName === 'Add 7UP') {
+                add7upClicks -= item.clicks;
+                localStorage.setItem('add7upClicks', add7upClicks);
+            } else if (itemName === 'Add 7UP Diet') {
+                add7updietClicks -= item.clicks;
+                localStorage.setItem('add7updietClicks', add7updietClicks);
+            } else if (itemName === 'Add Miranda') {
+                addmirandaClicks -= item.clicks;
+                localStorage.setItem('addmirandaClicks', addmirandaClicks);
+            } else if (itemName === 'Add Water') {
+                addwaterClicks -= item.clicks;
+                localStorage.setItem('addwaterClicks', addwaterClicks);
+            }
+
             saveOrderToLocalStorage();
         }
     
@@ -231,11 +363,11 @@
             const discountedTotal = getOrderTotal() - discountAmount;
     
             const discountedTotalElement = document.getElementById('discounted-total');
-            discountedTotalElement.innerHTML = `LBP ${discountedTotal.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`;
+            discountedTotalElement.innerHTML = `$ ${discountedTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
             discountedTotalElement.style.fontSize = '20px';
             discountedTotalElement.style.fontWeight = 'bold';
     
-            alert(`Discount applied successfully!\nDiscount Amount: LBP ${discountAmount.toFixed(3)}\n\nDiscounted Total: LBP ${discountedTotal.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`);
+            alert(`Discount applied successfully!\nDiscount Amount: $ ${discountAmount.toFixed(1)}\n\nDiscounted Total: $ ${discountedTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
             saveOrderToLocalStorage();
         }
     
@@ -243,29 +375,29 @@
             const orderSummary = document.getElementById('order-summary');
             const orderTotalElement = document.getElementById('order-total');
             let total = 0;
-    
+
             orderSummary.innerHTML = '';
-    
+
             order.forEach((item, index) => {
                 const li = document.createElement('li');
-                li.textContent = `${item.item} - LBP ${item.price.toLocaleString()},000`;
-    
+                li.textContent = `${item.item} - $ ${item.price.toLocaleString()}`;
+
                 const removeButton = document.createElement('button');
                 removeButton.textContent = 'Remove';
-                removeButton.onclick = () => removeItem(index);
-    
+                // Pass the item name as the second argument to removeItem
+                removeButton.onclick = () => removeItem(index, item.item);
+
                 removeButton.style.marginLeft = '20px';
-    
+
                 li.appendChild(removeButton);
                 orderSummary.appendChild(li);
                 total += item.price;
             });
 
-    
-            orderTotalElement.textContent = total.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+            orderTotalElement.textContent = total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             saveOrderToLocalStorage();
         }
-    
+
         function getOrderTotal() {
             let total = 0;
             order.forEach(item => {
@@ -283,8 +415,8 @@
             const discountInput = document.getElementById('discount-input');
     
             orderSummary.innerHTML = '';
-            orderTotalElement.textContent = '0.000';
-            discountedTotalElement.innerHTML = 'LBP 0.000';
+            orderTotalElement.textContent = '0.0';
+            discountedTotalElement.innerHTML = '$ 0.0';
             discountedTotalElement.style.fontSize = '';
             discountedTotalElement.style.fontWeight = '';
             discountInput.value = '';
@@ -298,32 +430,35 @@
         return;
     }
 
-    let orderSummary = '*Hello From TCRCS*\nThis is the Receipt for Your Order.\n Sitting on Table No.02\n\n*Order:*\n';
+    let orderSummary = '*Hello From TCRCS*\nThis is the Receipt for Your Order.\n Sitting on Table No.02\n---------------------------\n\n*Order:*\n';
 
     order.forEach((item) => {
-        orderSummary += `${item.item} - LBP ${item.price.toLocaleString()},000\n`;
+        orderSummary += `${item.item} - $ ${item.price.toLocaleString()}\n`;
     });
-
-    orderSummary += `\nTotal: LBP ${getOrderTotal().toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`;
 
     //discount in the inoice if discount displayed 
     const discountInfo = getDiscountInfo();
+    if(!discountInfo){
+        orderSummary += `\n*Total: $ ${getOrderTotal().toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}*`;
+    }
     if (discountInfo) {
+        orderSummary += `\nTotal: $ ${getOrderTotal().toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         orderSummary += `\nDiscount Applied: ${discountInfo}%`;
         const discountAmount = (discountInfo / 100) * getOrderTotal();
         const discountedTotal = getOrderTotal() - discountAmount;
-        orderSummary += `\n*Discounted Total: LBP ${discountedTotal.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}*`;
+        orderSummary += `\n*Discounted Total: $ ${discountedTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}*`;
     }
     //
     
-    orderSummary += '\n\n----------------------\nThank You For Visiting Us\nPowered by TCRCS';
+    orderSummary += '\n\n---------------------------\nThank You For Visiting Us\nPowered by TCRCS';
 
     window.open(`https://api.whatsapp.com/send?phone=${encodeURIComponent(recipientNumber)}&text=${encodeURIComponent(orderSummary)}`);
+    
 }
 
     
 function calculateTotal() {
-    const calculateInput = prompt('Enter a number to subtract from the total:\n*Enter the number without the 000*');
+    const calculateInput = prompt('Enter a number to subtract from the total:\n');
     const enteredValue = parseFloat(calculateInput);
 
     if (isNaN(enteredValue)) {
@@ -341,13 +476,14 @@ function calculateTotal() {
 
     newTotal -= enteredValue;
 
-    alert(`New Total after subtraction: LBP ${newTotal.toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 })}`);
+    alert(`New Total after subtraction: $ ${newTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`);
     resetOrder();
     order = [];
     updateOrderSummary();
     saveOrderToLocalStorage();
     alert('Order completed and paid successfully!');
 }
+
     
         function saveOrderToLocalStorage() {
             localStorage.setItem(`order_${currentPage}`, JSON.stringify(order));
