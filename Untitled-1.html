@@ -42,8 +42,9 @@
     <h3>Add Miranda Clicks: <span id="addmiranda-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addmirandaprice"></span></label></h3>
     <br>
     <h3>Add Water Clicks: <span id="addwater-clicks"></span> <label style="margin-left: 30px;">Total Price: <span>&dollar;</span><span id="total-addwaterprice"></span></label></h3>
-    <br>
-
+    <br><br>
+    <h1>Total: <span id="total-allprices"></span></h1>
+    <br><br>
     <!-- Buttons to refresh counts and clear all -->
     <div>
     <button class="button-k" onclick="refreshCounts()">Refresh All</button>
@@ -220,8 +221,6 @@
                 document.getElementById('addwater-clicks').innerText = `${addWaterClicks}`;
                 document.getElementById('total-addwaterprice').innerText = `${multipliedAddWaterPrice.toFixed(2)}`;
             }
-
-    
         }
 
         // Function to clear all values
@@ -246,6 +245,7 @@
             localStorage.removeItem('add7updietClicks');
             localStorage.removeItem('addmirandaClicks');
             localStorage.removeItem('addwaterClicks');
+            localStorage.removeItem('total-allprices')
 
             // Reset the displayed values to empty
             document.getElementById('burger-clicks').innerText = '';
@@ -270,13 +270,37 @@
             document.getElementById('total-add7updietprice').innerText = '';
             document.getElementById('total-addmirandaprice').innerText = '';
             document.getElementById('total-addwaterprice').innerText = '';
+            document.getElementById('total-allprices').innerText = '';
             }
-
-
         }
 
-        // Call the function on page load
-        refreshCounts();
-    </script>
+    // Function to calculate and display the total of all prices
+    function calculateTotal() {
+        // Retrieve all individual prices
+        let prices = [
+            'total-burgerprice', 'total-chickenburgerprice', 'total-smallburgerprice',
+            'total-burgerplatterprice', 'total-pitabreadburgerprice', 'total-tawookpitabreadprice',
+            'total-tawookplatterprice', 'total-tawooksubprice', 'total-addfriesorcoleslawprice',
+            'total-addfriesandcoleslawprice', 'total-addcheeseprice', 'total-addgarlicprice',
+            'total-addpepsiprice', 'total-addpepsidietprice', 'total-add7upprice', 'total-add7updietprice',
+            'total-addmirandaprice', 'total-addwaterprice'
+        ];
+
+        // Calculate the total of all prices
+        let totalAllPrices = prices.reduce(function (accumulator, priceId) {
+            let price = parseFloat(document.getElementById(priceId).innerText);
+            return isNaN(price) ? accumulator : accumulator + price;
+        }, 0);
+
+        // Display the total in the <span> element
+        document.getElementById('total-allprices').innerText = `$${totalAllPrices.toFixed(2)}`;
+    }
+
+    // Call the calculateTotal function after refreshing counts
+    refreshCounts();
+
+    // Call the calculateTotal function on page load
+    calculateTotal();
+        </script>
 </body>
 </html>
